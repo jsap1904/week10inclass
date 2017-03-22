@@ -42,6 +42,52 @@
 	
 // 	poke.pop()
 
-// 	console.log(poke)
-var num = [23, 24, 985, 4, 5]
-console.log(num.sort(function (a, b){ return a-b } ))
+// // 	console.log(poke)
+// var num = [23, 24, 985, 4, 5]
+// console.log(num.sort(function (a, b){ return a-b } ))
+
+var accounts = [
+{ 
+	username: "bob",
+	password: "pw"
+},
+{
+	username: "alice",
+	password: "pw"
+}
+]
+
+function register() {
+	var usernameInput = document.getElementById("usernameInput").value
+	var passwordInput = document.getElementById("passwordInput").value
+
+	var newUser = {
+		username: usernameInput,
+		password: passwordInput
+	}
+
+for(var i=0; i<= accounts.length;i++) {
+
+	if(usernameInput == accounts[I].username) {
+		console.log("username already exist")
+	
+}
+	else { 
+		accounts.push(newUser)
+		console.log(accounts)
+	}
+}		
+
+function login () {
+	var username = document.getElementById("username").value
+	var password = document.getElementById("password").value
+	
+	for(var i =0; i <= accounts.length;i++) {
+
+		if(usernameInput && passwordInput == accounts[I])
+			console.log("login succesfull")
+	}
+
+	else {
+		console.log("try again")
+	}
