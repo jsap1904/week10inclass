@@ -38,8 +38,10 @@
 // }
 // 	console.log(object.length)
 
-var poke = ['tuna', 'salmon', 'mackeral', 'ikura', 'uni', 'hamachi', 'tamago']
+// var poke = ['tuna', 'salmon', 'mackeral', 'ikura', 'uni', 'hamachi', 'tamago']
 	
-	poke.pop()
+// 	poke.pop()
 
-	console.log(poke)
+// 	console.log(poke)
+var num = [23, 24, 985, 4, 5]
+console.log(num.sort(function (a, b){ return a-b } ))
