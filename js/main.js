@@ -84,10 +84,10 @@ function login () {
 	
 	for(var i =0; i <= accounts.length;i++) {
 
-		if(usernameInput && passwordInput == accounts[I])
-			console.log("login succesfull")
+		if(usernameInput && passwordInput !== accounts[I])
+			console.log("try again")
 	}
 
 	else {
-		console.log("try again")
+		console.log("login successful")
 	}
