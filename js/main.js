@@ -47,14 +47,14 @@
 // console.log(num.sort(function (a, b){ return a-b } ))
 
 var accounts = [
-{ 
-	username: "bob",
-	password: "pw"
-},
-{
-	username: "alice",
-	password: "pw"
-}
+	{ 
+		username: "bob",
+		password: "pw"
+	},
+	{
+		username: "alice",
+		password: "pw"
+	}
 ]
 
 function register() {
@@ -66,28 +66,35 @@ function register() {
 		password: passwordInput
 	}
 
-for(var i=0; i<= accounts.length;i++) {
+	for(var i=0; i < accounts.length; i++) {
 
-	if(usernameInput == accounts[I].username) {
+		if(usernameInput == accounts[i].username) {
 		console.log("username already exist")
-	
-}
-	else { 
+		return
+		}
+
+		else { 
 		accounts.push(newUser)
-		console.log(accounts)
-	}
-}		
+		console.log("registration successful")
+		return
+		}
+	}		
+}
 
-function login () {
-	var username = document.getElementById("username").value
-	var password = document.getElementById("password").value
+function login() {
+	var name = document.getElementById("usernameInput").value
+	var pw = document.getElementById("passwordInput").value
 	
-	for(var i =0; i <= accounts.length;i++) {
+	for(var i = 0; i < accounts.length; i++) {
 
-		if(usernameInput && passwordInput !== accounts[I])
+		if(name !== accounts[i].username || pw !== accounts[i].password) {
 			console.log("try again")
-	}
-
-	else {
+			return	
+		}
+	
+		else if(name == accounts[i].username && pw == accounts[i].password) {
 		console.log("login successful")
+		return
+		}
 	}
+}
